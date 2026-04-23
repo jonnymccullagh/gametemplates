@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="rulesPanel" type="image" sprite="ModernDarkBox">
+	<object name="rulesLabel" type="text" style="ModernLabelText" size="8 8 120 30"/>
+	<object name="rulesInput" type="input" size="8 34 100%-8 100%-8" style="ModernInput" max_length="1024"/>
+	<object type="image" sprite="ModernDarkBoxGoldBorder" ghost="true"/>
+</object>

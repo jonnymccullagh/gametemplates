@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<object name="saveTemplatePage" hidden="true" z="200">
+
+	<script directory="gui/gamesetup/Pages/SaveTemplatePage/"/>
+
+	<object type="image" sprite="ModernFade"/>
+
+	<object type="image" style="ModernDialog" size="50%-280 50%-145 50%+280 50%+145">
+
+		<object style="ModernLabelText" type="text" size="50%-128 -18 50%+128 14">
+			<translatableAttribute id="caption">Save Game Template</translatableAttribute>
+		</object>
+
+		<object type="text" style="ModernLabelText" size="24 28 100%-24 52">
+			<translatableAttribute id="caption">Overwrite existing template</translatableAttribute>
+		</object>
+
+		<object name="templateNameDropdown" type="dropdown" style="ModernDropDown" size="24 56 100%-24 84" button_width="22"/>
+
+		<object type="text" style="ModernLabelText" size="24 96 100%-24 122">
+			<translatableAttribute id="caption">Or type new template name</translatableAttribute>
+		</object>
+
+		<object name="templateNameInput" type="input" style="ModernInput" size="24 130 100%-24 156" max_length="128"/>
+
+		<object name="templateNameFeedback" type="text" style="ModernLabelText" textcolor="255 80 80" size="24 164 100%-24 188"/>
+
+		<object name="templateSaveCancelButton" type="button" style="ModernButtonRed" size="100%-300 100%-42 100%-160 100%-14" hotkey="cancel">
+			<translatableAttribute id="caption">Cancel</translatableAttribute>
+		</object>
+
+		<object name="templateSaveButton" type="button" style="ModernButtonRed" size="100%-150 100%-42 100%-20 100%-14" enabled="false">
+			<translatableAttribute id="caption">Save</translatableAttribute>
+		</object>
+
+	</object>
+
+</object>

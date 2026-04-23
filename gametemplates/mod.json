@@ -1,0 +1,9 @@
+{
+	"name": "gametemplates",
+	"version": "0.28",
+	"label": "Game Templates",
+	"url": "https://gitea.wildfiregames.com/manowar/0ad",
+	"description": "Mod for saving and loading local multiplayer game templates",
+	"ignoreInCompatibilityChecks": true,
+	"dependencies": ["0ad=0.28.0"]
+}

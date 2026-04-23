@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<object name="templatePickerPage" hidden="true" z="200">
+
+	<script directory="gui/gamesetup/Pages/TemplatePickerPage/"/>
+
+	<object type="image" sprite="ModernFade"/>
+
+	<object type="image" style="ModernDialog" size="50%-360 50%-220 50%+360 50%+220">
+
+		<object style="ModernLabelText" type="text" size="50%-128 -18 50%+128 14">
+			<translatableAttribute id="caption">Load Game Template</translatableAttribute>
+		</object>
+
+		<object name="templateSelection"
+			size="20 26 58%-10 100%-56"
+			style="ModernSortedList"
+			type="olist"
+			sortable="false"
+			font="sans-stroke-16"
+			hidden="true">
+			<column id="name" textcolor="255 255 255" width="99%"/>
+		</object>
+
+		<object name="templateSelectionFeedback" size="20 32 58%-10 100%-56" type="text" style="ModernLabelText">
+			<translatableAttribute id="caption">No saved templates found.</translatableAttribute>
+		</object>
+
+		<object type="image" sprite="ModernDarkBoxGold" size="58%+10 26 100%-20 100%-56">
+			<object name="templateDetails" type="text" style="ModernLabelText" size="12 12 100%-12 100%-12">
+				<translatableAttribute id="caption">No template selected.</translatableAttribute>
+			</object>
+		</object>
+
+		<object name="templateCancelButton" type="button" style="ModernButtonRed" size="100%-300 100%-42 100%-160 100%-14" hotkey="cancel">
+			<translatableAttribute id="caption">Cancel</translatableAttribute>
+		</object>
+
+		<object name="templateDeleteButton" type="button" style="ModernButtonRed" size="100%-450 100%-42 100%-310 100%-14" enabled="false">
+			<translatableAttribute id="caption">Delete</translatableAttribute>
+		</object>
+
+		<object name="templateLoadButton" type="button" style="ModernButtonRed" size="100%-150 100%-42 100%-20 100%-14" enabled="false">
+			<translatableAttribute id="caption">Load</translatableAttribute>
+		</object>
+
+	</object>
+
+</object>
