@@ -122,6 +122,7 @@ async function init(attribs)
 	{
 		const hasXmppClient = Engine.HasXmppClient();
 		Engine.GetGUIObjectByName("hostPasswordWrapper").hidden = !hasXmppClient;
+		updateHostPage(attribs.loadSavedGame);
 		if (hasXmppClient)
 		{
 			Engine.GetGUIObjectByName("hostPlayerName").caption = attribs.name;
@@ -531,6 +532,29 @@ function getDefaultGameName()
 function getDefaultPassword()
 {
 	return "";
+}
+
+function updateHostPage(loadSavedGame)
+{
+	const hostTemplateWrapper = Engine.GetGUIObjectByName("hostTemplateWrapper");
+	const hostPlayerNameWrapper = Engine.GetGUIObjectByName("hostPlayerNameWrapper");
+	const hostServerNameWrapper = Engine.GetGUIObjectByName("hostServerNameWrapper");
+	const hostPortWrapper = Engine.GetGUIObjectByName("hostPortWrapper");
+	const hostPasswordWrapper = Engine.GetGUIObjectByName("hostPasswordWrapper");
+
+	hostTemplateWrapper.hidden = loadSavedGame;
+	if (!loadSavedGame)
+		return;
+
+	const verticalOffset = 40;
+	hostPlayerNameWrapper.size.top -= verticalOffset;
+	hostPlayerNameWrapper.size.bottom -= verticalOffset;
+	hostServerNameWrapper.size.top -= verticalOffset;
+	hostServerNameWrapper.size.bottom -= verticalOffset;
+	hostPortWrapper.size.top -= verticalOffset;
+	hostPortWrapper.size.bottom -= verticalOffset;
+	hostPasswordWrapper.size.top -= verticalOffset;
+	hostPasswordWrapper.size.bottom -= verticalOffset;
 }
 
 function initGameTemplateDropdown()

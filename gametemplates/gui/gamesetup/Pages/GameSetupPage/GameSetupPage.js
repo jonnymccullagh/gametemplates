@@ -46,7 +46,7 @@ SetupWindowPages.GameSetupPage = class
 				"mapPreview": new MapPreview(setupWindow, isSavedGame),
 				"resetCivsButton": new ResetCivsButton(setupWindow, isSavedGame),
 				"resetTeamsButton": new ResetTeamsButton(setupWindow, isSavedGame),
-				"rulesPanel": new RulesPanel(setupWindow),
+				"rulesPanel": new RulesPanel(setupWindow, gameSettingsPanel),
 				"soundNotification": new SoundNotification(setupWindow),
 				"tipsPanel": new TipsPanel(gameSettingsPanel),
 				"onscreenToolTip": new Tooltip()

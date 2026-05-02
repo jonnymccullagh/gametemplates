@@ -30,16 +30,16 @@
 	<object name="centerPanel" size="0 0 100% 100%-64">
 
 		<object name="centerLeftPanel" size="24 0 100% 100%">
-			<object size="0 346 100%-795-24 100%-94">
+			<object name="rulesPanelWrapper" size="0 346 100%-795-24 428" hidden="true">
+				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/RulesPanel.xml"/>
+			</object>
+
+			<object name="chatPanelWrapper" size="0 346 100%-795-24 100%">
 				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/Chat/ChatPanel.xml"/>
 			</object>
 
 			<object size="0 370 500-24 560">
 				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/TipsPanel.xml"/>
-			</object>
-
-			<object size="0 100%-88 100%-795-24 100%">
-				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/RulesPanel.xml"/>
 			</object>
 		</object>
 

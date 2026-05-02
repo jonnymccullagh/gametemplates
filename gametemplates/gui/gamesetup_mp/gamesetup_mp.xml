@@ -61,11 +61,13 @@
 				<translatableAttribute id="caption">Set up your server to host.</translatableAttribute>
 			</object>
 
-			<object type="text" size="20 36 50% 66" style="ModernRightLabelText">
-				<translatableAttribute id="caption">Game Template:</translatableAttribute>
-			</object>
+			<object name="hostTemplateWrapper">
+				<object type="text" size="20 36 50% 66" style="ModernRightLabelText">
+					<translatableAttribute id="caption">Game Template:</translatableAttribute>
+				</object>
 
-			<object name="hostTemplateName" type="dropdown" size="50%+10 40 100%-20 64" style="ModernDropDown" button_width="22"/>
+				<object name="hostTemplateName" type="dropdown" size="50%+10 40 100%-20 64" style="ModernDropDown" button_width="22"/>
+			</object>
 
 			<object name="hostPlayerNameWrapper" hidden="true">
 				<object type="text" size="20 66 50% 96" style="ModernRightLabelText">
@@ -92,7 +94,7 @@
 				</object>
 			</object>
 
-			<object>
+			<object name="hostPortWrapper">
 				<object type="text" size="20 106 50% 136" style="ModernRightLabelText">
 					<translatableAttribute id="caption">Server Port:</translatableAttribute>
 				</object>
