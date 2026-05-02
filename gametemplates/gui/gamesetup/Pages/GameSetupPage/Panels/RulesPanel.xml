@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<object name="rulesPanel" type="image" sprite="ModernDarkBox">
+<object name="rulesPanel" type="image" sprite="ModernDarkBox" size="0 0 100% 100%">
 	<object name="rulesLabel" type="text" style="ModernLabelText" size="8 8 120 30"/>
-	<object name="rulesInput" type="input" size="8 34 100%-8 100%-8" style="ModernInput" max_length="1024"/>
+	<object name="rulesInput" type="input" size="8 34 100%-96 100%-8" style="ModernInput" max_length="1024"/>
+	<object name="rulesSendButton" type="button" size="100%-92 34 100%-8 100%-8" style="StoneButton">
+		<translatableAttribute id="caption">Send</translatableAttribute>
+	</object>
 	<object type="image" sprite="ModernDarkBoxGoldBorder" ghost="true"/>
 </object>
