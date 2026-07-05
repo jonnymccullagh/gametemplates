@@ -21,15 +21,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build archives
+        id: build
         shell: bash
         run: |
           set -euo pipefail
+          rm -rf dist
           mkdir -p dist
 
           version="$(tr -d '[:space:]' < version.txt)"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
           artifact_base="gametemplates-${version}"
+          archive_dir="dist/${artifact_base}"
 
-          cp -R gametemplates "dist/${artifact_base}"
+          cp -R gametemplates "${archive_dir}"
 
           (
             cd dist
@@ -38,22 +42,29 @@ jobs:
             cp "${artifact_base}.zip" "${artifact_base}.pyromod"
           )
 
+          (
+            cd "${archive_dir}"
+            zip -r "../${artifact_base}-modio.zip" .
+          )
+
       - name: Create GitHub release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: true
           files: |
-            dist/*.zip
-            dist/*.tar.gz
-            dist/*.pyromod
+            dist/${{ format('gametemplates-{0}.zip', steps.build.outputs.version) }}
+            dist/${{ format('gametemplates-{0}.tar.gz', steps.build.outputs.version) }}
+            dist/${{ format('gametemplates-{0}.pyromod', steps.build.outputs.version) }}
+            dist/${{ format('gametemplates-{0}-modio.zip', steps.build.outputs.version) }}
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: gametemplates-build-artifacts
           path: |
-            dist/*.zip
-            dist/*.tar.gz
-            dist/*.pyromod
+            dist/${{ format('gametemplates-{0}.zip', steps.build.outputs.version) }}
+            dist/${{ format('gametemplates-{0}.tar.gz', steps.build.outputs.version) }}
+            dist/${{ format('gametemplates-{0}.pyromod', steps.build.outputs.version) }}
+            dist/${{ format('gametemplates-{0}-modio.zip', steps.build.outputs.version) }}
           if-no-files-found: error
