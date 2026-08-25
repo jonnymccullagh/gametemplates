@@ -20,14 +20,14 @@ This is a mod for 0 A.D. that allows saving and loading multiplayer game templat
 
 
 ## Usage
-Copy the contents of the `gametemplates` folder to your mods directry (e.g. `/home/jonny/.local/share/0ad/mods` on Linux)
+Copy the contents of the `gametemplates` folder to your mods directry (e.g. `/home/$USER/.local/share/0ad/mods` on Linux)
 
 
 ## Where are my game templates
 
 On Linux with a Flatpak install they are at:
 ```
-/home/yourname/.var/app/com.play0ad.zeroad/data/0ad/mods/user/moddata/game_templates/game_templates.mp.json
+/home/$USER/.var/app/com.play0ad.zeroad/data/0ad/mods/user/moddata/game_templates/game_templates.mp.json
 ```
 Non-Flatpak will likely store under `.local/share/0ad`
 
