@@ -7,7 +7,7 @@ class LoadTemplateButton
 		this.templateStore = new GameTemplateStore();
 
 		this.button = Engine.GetGUIObjectByName("loadTemplateButton");
-		this.button.caption = this.Caption;
+		Engine.GetGUIObjectByName("loadTemplateButtonLabel").caption = this.Caption;
 		this.button.tooltip = this.Tooltip;
 		this.button.onPress = this.onPress.bind(this);
 		this.button.hidden = isSavedGame;

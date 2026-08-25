@@ -5,7 +5,7 @@ class SaveTemplateButton
 		this.setupWindow = setupWindow;
 
 		this.button = Engine.GetGUIObjectByName("saveTemplateButton");
-		this.button.caption = this.Caption;
+		Engine.GetGUIObjectByName("saveTemplateButtonLabel").caption = this.Caption;
 		this.button.tooltip = this.Tooltip;
 		this.button.onPress = this.onPress.bind(this);
 		this.button.hidden = isSavedGame;

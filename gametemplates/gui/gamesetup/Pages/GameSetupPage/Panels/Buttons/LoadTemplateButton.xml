@@ -2,6 +2,8 @@
 <object
 	name="loadTemplateButton"
 	type="button"
-	style="ModernButtonRed"
-	tooltip_style="onscreenToolTip"
-/>
+	style="ModernTabButtonVertical"
+	tooltip_style="onscreenToolTip">
+
+	<object name="loadTemplateButtonLabel" type="text" style="ModernLabelText" ghost="true"/>
+</object>
