@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="templateActionsPanel">
+	<object size="0 0 100% 34">
+		<include file="gui/gamesetup/Pages/GameSetupPage/Panels/Buttons/LoadTemplateButton.xml"/>
+	</object>
+
+	<object size="0 38 100% 72">
+		<include file="gui/gamesetup/Pages/GameSetupPage/Panels/Buttons/SaveTemplateButton.xml"/>
+	</object>
+</object>

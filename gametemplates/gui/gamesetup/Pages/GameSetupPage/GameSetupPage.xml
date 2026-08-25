@@ -60,6 +60,10 @@
 				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/GameSettingsTabs.xml"/>
 			</object>
 
+			<object size="0 118 100%-49 190" z="46">
+				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/TemplateActionsPanel.xml"/>
+			</object>
+
 			<object size="0 0 100%-25 100%" z="45">
 				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/GameDescription.xml"/>
 			</object>
@@ -73,14 +77,6 @@
 
 			<object size="20 100%-32-10 100%-664 100%+9">
 				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/Tooltip.xml"/>
-			</object>
-
-			<object size="100%-836 100%-32 100%-696 100%">
-				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/Buttons/SaveTemplateButton.xml"/>
-			</object>
-
-			<object size="100%-686 100%-32 100%-546 100%">
-				<include file="gui/gamesetup/Pages/GameSetupPage/Panels/Buttons/LoadTemplateButton.xml"/>
 			</object>
 
 			<object size="100%-656 100%-32 100%-486 100%">

@@ -36,6 +36,9 @@ SetupWindowPages.GameSetupPage = class
 			const gameSettingTabs = new GameSettingTabs(setupWindow, this.panelButtons.lobbyButton);
 			const gameSettingsPanel = new GameSettingsPanel(
 				setupWindow, gameSettingTabs, this.gameSettingControlManager);
+			const templateActionsPanel = Engine.GetGUIObjectByName("templateActionsPanel");
+			if (templateActionsPanel)
+				templateActionsPanel.hidden = isSavedGame || !g_IsController;
 
 			this.panels = {
 				"chatPanel": new ChatPanel(setupWindow, this.gameSettingControlManager, gameSettingsPanel),
@@ -51,6 +54,14 @@ SetupWindowPages.GameSetupPage = class
 				"tipsPanel": new TipsPanel(gameSettingsPanel),
 				"onscreenToolTip": new Tooltip()
 			};
+
+			// Leave room for the template-actions panel below the Game Type tab.
+			gameSettingTabs.registerTabsResizeHandler((settingsTabButtonsFrame) =>
+			{
+				this.panels.gameDescription.gameDescription.size.top =
+					settingsTabButtonsFrame.size.bottom +
+					(templateActionsPanel && !templateActionsPanel.hidden ? 79 : 3);
+			});
 		}
 
 		setupWindow.controls.gameSettingsController.registerLoadingChangeHandler((loading) => this.onLoadingChange(loading));
