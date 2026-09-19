@@ -36,15 +36,11 @@ jobs:
           cp -R gametemplates "${archive_dir}"
 
           (
-            cd dist
-            zip -r "${artifact_base}.zip" "${artifact_base}"
-            tar -czf "${artifact_base}.tar.gz" "${artifact_base}"
-            cp "${artifact_base}.zip" "${artifact_base}.pyromod"
-          )
-
-          (
             cd "${archive_dir}"
-            zip -r "../${artifact_base}-modio.zip" .
+            zip -r "../${artifact_base}.zip" .
+            tar -czf "../${artifact_base}.tar.gz" .
+            cp "../${artifact_base}.zip" "../${artifact_base}.pyromod"
+            cp "../${artifact_base}.zip" "../${artifact_base}-modio.zip"
           )
 
       - name: Create GitHub release
